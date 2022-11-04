@@ -2,12 +2,14 @@ package Kodlama.Io.Devs.business.concretes;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Kodlama.Io.Devs.business.abstracts.ProgrammingLanguageService;
 import Kodlama.Io.Devs.business.requests.CreateProgrammingLanguageRequest;
+import Kodlama.Io.Devs.business.requests.UpdateProgrammingLanguageRequest;
 import Kodlama.Io.Devs.business.responses.GetAllProgrammingLanguageResponse;
 import Kodlama.Io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
 import Kodlama.Io.Devs.entities.concretes.ProgrammingLanguage;
@@ -42,7 +44,7 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService{
 	}
 
 	@Override
-	public void Add(CreateProgrammingLanguageRequest createRequest) {
+	public void add(CreateProgrammingLanguageRequest createRequest) {
 		
 		ProgrammingLanguage programmingLanguage = new ProgrammingLanguage();
 		programmingLanguage.setName(createRequest.getName());
@@ -50,6 +52,23 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService{
 		languageRepository.save(programmingLanguage);
 		
 	}
+
+	@Override
+	public void update(int id, UpdateProgrammingLanguageRequest updateRequest) {
+		
+		Optional<ProgrammingLanguage> programmingLanguage = languageRepository.findById(id);
+		programmingLanguage.get().setName(updateRequest.getName());
+		languageRepository.save(programmingLanguage.get());
+	
+	}
+
+	@Override
+	public void delete(int id) {
+		languageRepository.deleteById(id);
+	}
+	
+
+
 	
 	
 }
