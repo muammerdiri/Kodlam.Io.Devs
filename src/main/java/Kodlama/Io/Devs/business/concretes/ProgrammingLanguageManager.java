@@ -8,9 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import Kodlama.Io.Devs.business.abstracts.ProgrammingLanguageService;
-import Kodlama.Io.Devs.business.requests.CreateProgrammingLanguageRequest;
-import Kodlama.Io.Devs.business.requests.UpdateProgrammingLanguageRequest;
-import Kodlama.Io.Devs.business.responses.GetAllProgrammingLanguageResponse;
+import Kodlama.Io.Devs.business.requests.programmingLanguage.CreateProgrammingLanguageRequest;
+import Kodlama.Io.Devs.business.requests.programmingLanguage.UpdateProgrammingLanguageRequest;
+import Kodlama.Io.Devs.business.responses.programmingLanguage.GetAllProgrammingLanguageResponse;
 import Kodlama.Io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
 import Kodlama.Io.Devs.entities.concretes.ProgrammingLanguage;
 

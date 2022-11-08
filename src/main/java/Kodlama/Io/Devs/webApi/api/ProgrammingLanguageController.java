@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import Kodlama.Io.Devs.business.abstracts.ProgrammingLanguageService;
-import Kodlama.Io.Devs.business.requests.CreateProgrammingLanguageRequest;
-import Kodlama.Io.Devs.business.requests.UpdateProgrammingLanguageRequest;
-import Kodlama.Io.Devs.business.responses.GetAllProgrammingLanguageResponse;
+import Kodlama.Io.Devs.business.requests.programmingLanguage.CreateProgrammingLanguageRequest;
+import Kodlama.Io.Devs.business.requests.programmingLanguage.UpdateProgrammingLanguageRequest;
+import Kodlama.Io.Devs.business.responses.programmingLanguage.GetAllProgrammingLanguageResponse;
 
 @RestController
 @RequestMapping("/api/programminglanguages")

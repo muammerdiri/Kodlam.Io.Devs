@@ -1,4 +1,4 @@
-package Kodlama.Io.Devs.business.requests;
+package Kodlama.Io.Devs.business.requests.subTechnology;
 
 import Kodlama.Io.Devs.entities.concretes.ProgrammingLanguage;
 import lombok.AllArgsConstructor;

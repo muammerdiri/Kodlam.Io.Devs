@@ -1,4 +1,4 @@
-package Kodlama.Io.Devs.business.responses;
+package Kodlama.Io.Devs.business.requests.programmingLanguage;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -9,10 +9,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class GetAllSubTechnologyResponse {
-
-	private int id;
-	private String programmingLanguageName;
+public class CreateProgrammingLanguageRequest {
 	private String name;
-	
+
 }

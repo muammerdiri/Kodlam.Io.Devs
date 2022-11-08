@@ -1,4 +1,4 @@
-package Kodlama.Io.Devs.business.requests;
+package Kodlama.Io.Devs.business.requests.programmingLanguage;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
