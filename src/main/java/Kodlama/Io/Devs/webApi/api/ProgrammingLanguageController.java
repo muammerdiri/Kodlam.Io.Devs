@@ -2,6 +2,8 @@ package Kodlama.Io.Devs.webApi.api;
 
 import java.util.List;
 
+import javax.websocket.server.PathParam;
+
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -13,6 +15,7 @@ import Kodlama.Io.Devs.business.abstracts.ProgrammingLanguageService;
 import Kodlama.Io.Devs.business.requests.programmingLanguage.CreateProgrammingLanguageRequest;
 import Kodlama.Io.Devs.business.requests.programmingLanguage.UpdateProgrammingLanguageRequest;
 import Kodlama.Io.Devs.business.responses.programmingLanguage.GetAllProgrammingLanguageResponse;
+import Kodlama.Io.Devs.business.responses.programmingLanguage.GetByIdProgrammingLanguageResponse;
 
 @RestController
 @RequestMapping("/api/programminglanguages")
@@ -44,6 +47,11 @@ public class ProgrammingLanguageController {
 	@DeleteMapping("/delete")
 	public void delete(int id) {
 		languageService.delete(id);
+	}
+	
+	@GetMapping("/getbyid")
+	public GetByIdProgrammingLanguageResponse getById (int id) {
+		return languageService.getById(id);
 	}
 	
 	

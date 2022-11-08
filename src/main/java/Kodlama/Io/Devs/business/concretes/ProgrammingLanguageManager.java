@@ -11,6 +11,7 @@ import Kodlama.Io.Devs.business.abstracts.ProgrammingLanguageService;
 import Kodlama.Io.Devs.business.requests.programmingLanguage.CreateProgrammingLanguageRequest;
 import Kodlama.Io.Devs.business.requests.programmingLanguage.UpdateProgrammingLanguageRequest;
 import Kodlama.Io.Devs.business.responses.programmingLanguage.GetAllProgrammingLanguageResponse;
+import Kodlama.Io.Devs.business.responses.programmingLanguage.GetByIdProgrammingLanguageResponse;
 import Kodlama.Io.Devs.dataAccess.abstracts.ProgrammingLanguageRepository;
 import Kodlama.Io.Devs.entities.concretes.ProgrammingLanguage;
 
@@ -65,6 +66,16 @@ public class ProgrammingLanguageManager implements ProgrammingLanguageService{
 	@Override
 	public void delete(int id) {
 		languageRepository.deleteById(id);
+	}
+
+	@Override
+	public GetByIdProgrammingLanguageResponse getById(int id) {
+		
+		Optional<ProgrammingLanguage> programmingLanguage = languageRepository.findById(id);
+		GetByIdProgrammingLanguageResponse request = new GetByIdProgrammingLanguageResponse();
+		request.setId(programmingLanguage.get().getId());
+		request.setName(programmingLanguage.get().getName());
+		return request;
 	}
 	
 
