@@ -57,7 +57,7 @@ public class SubTechnologyManager implements SubTechnologyService{
 	public void update(int id, UpdateSubTechnologyRequest updateRequest) {
 		Optional<SubTechnology> subTechnology = repository.findById(id);
 		SubTechnology technology= subTechnology.get();
-		technology.getProgrammingLanguage().setId(updateRequest.getProgrammingLanguageId());
+		technology.setProgrammingLanguage(updateRequest.getProgrammingLanguage());
 		technology.setName(updateRequest.getName());
 		repository.save(technology);
 		

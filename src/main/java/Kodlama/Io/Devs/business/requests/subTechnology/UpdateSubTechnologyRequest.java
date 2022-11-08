@@ -1,5 +1,6 @@
 package Kodlama.Io.Devs.business.requests.subTechnology;
 
+import Kodlama.Io.Devs.entities.concretes.ProgrammingLanguage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,6 +11,6 @@ import lombok.NoArgsConstructor;
 public class UpdateSubTechnologyRequest {
 	
 	private String name;
-	private int programmingLanguageId;
+	private ProgrammingLanguage programmingLanguage;
 	
 }
